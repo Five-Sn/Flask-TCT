@@ -1,0 +1,35 @@
+#B-length{}
+#list-length{}
+#B-full{}
+#list-full{}
+
+body{
+    background:#aaddaa;
+    font-family:"Arial";
+}
+
+h1{
+    background:#90cc90;
+}
+
+th{
+    background:#ffffdd;
+}
+
+#title{
+    background:#70aa70;
+    font-size:50px;
+    margin: auto;
+}
+
+.centered{
+    text-align:center;
+}
+
+div.fixed {
+    text-align:center;
+    position:fixed;
+    top: 5px;
+    left: 5px;
+    margin: auto;
+}
