@@ -8,9 +8,9 @@ $('#list-full').hide();
 $('#list-length').hide();
 
 $('#B-full').click(function(){
-    if(list !== "full"){
+    if(list !== '#list-full'){
         $('#list-full').show();
-        list = "full";
+        list = '#list-full';
     } else {
         $('#list-full').hide();
         list = "none";
@@ -19,10 +19,22 @@ $('#B-full').click(function(){
 
 $('#B-length').click(function(){
     if(list !== "length"){
-        $('#list-length').show();
+        //$('#list-length').show();
         list = "length";
     } else {
-        $('#list-full').hide();
+        //$('#list-length').hide();
         list = "none";
     }
 });
+
+//I think this makes Popcode lag
+/*while(1 > 0){
+    if(list === null){
+        break;
+    }
+    if(list === '#list-full'){
+    $('#list-full').show();
+    } else {
+    $('#list-full').hide();
+    }
+}*/
