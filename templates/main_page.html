@@ -2,13 +2,23 @@
 <html>
     <head>
         <title>Travis Country Trails</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/static/css/main_page.css">
+        <script src="/static/js/home.js"></script>
     </head>
     <body>
         <div class="fixed">
             <h1 id="title">Travis County Trails</h1>
         </div>
-        <h1 class="centered">$ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS</h1>
-        <p class="centered" style="font-size:20px">Search for a trail using:</p>
+        <h1 class="centered">$ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS $ ADS</h1>
+
+        <input id="searchName" type="text" placeholder="Search by name">
+        <button id="search-submit" type="button">Search</button>
+        <div id="searchResults">
+        <h2>Search Results:</h2>
+        </div>
+
+        <p class="centered" style="font-size:20px">Choose a full list ordered by:</p>
         <table style="width:100%">
             <tr>
                 <th>Popular</th>
@@ -17,30 +27,14 @@
             </tr>
             <tr>
                 <th>Location</th>
-                <th id="B-length">Length</th>
+                <th class="cat-button">Length</th>
                 <th>Type</th>
             </tr>
             <tr>
                 <th></th>
-                <th id="B-full">Full list</th>
+                <th class="cat-button">Full list</th>
                 <th></th>
             </tr>
         </table>
-        <div id="list-full">
-            <p>- Zilker Park Trail</p>
-            <p>- Gilleland Creek</p>
-            <p>- Balcones</p>
-            <p>- Walnut Creek</p>
-            <p>- Katherine Fleischer Park</p>
-            <p>- Settlers Valley</p>
-            <p>- Pfairways</p>
-            <p>- Copperfield</p>
-            <p>- Obscure BMX Park</p>
-        </div>
-        <div id="list-length">
-            <h2>From longest to shortest:</h2>
-            <p>- Walnut Creek</p>
-            <p>- Obscure BMX Park</p>
-        </div>
     </body>
 </html>
