@@ -5,24 +5,45 @@ $(document).ready(function(){
 
         event.preventDefault();
 
-        var trailLength = $("#length").val();
+        //Difficulty and length aren't here because the user can't search using them:
         var trailName = $("#searchName").val();
-        var trailLocation = $("#location").val();
+        var trailLocation = $("#searchLocation").val();
+        var trailType = $("#searchType").val();
 
-        var queryString = "/trails" + "?name=" + trailName + "&length=" + trailLength + "&location=" + trailLocation;
+        var queryString = "/trails" + "?name=" + trailName + "&location=" + trailLocation + "&type=" + trailType;
         console.log("query string:" + queryString);
 
         $.getJSON( queryString, function (json) {
             console.log(json);
 
             var items = [];
-            items.push("<ul>");
+            items.push( "<tr> <th>Name:</th> <th>Length (Miles):</th> <th>Difficulty:</th> <th>Location:</th> <th>Type:</th> </tr>")
 
             $.each( json, function( key, val ) {
-                items.push( "<li>" + "Name: " + val.name + " | " + "Length: " + val.length + " | " + "Location: " + val.location + "</li>" );
+                var newDifficulty = "";
+                if (val.difficulty != null){
+                    newDifficulty =  val.difficulty + "/10";
+                }
+
+                items.push( "<tr>" + "<td>" + val.name + "</td>" + "<td>" + val.length + "</td>" + "<td>" + newDifficulty + "</td>" + "<td>" + val.location + "</td>" + "<td>" + val.type + "</td>" + "</tr>");
             });
-            items.push("</ul>");
+            //items.push("</table>");
             $("#searchResults").html(items);
         });
     });
 });
+
+function ridNull(val){
+    if (val == null){
+        return " ";
+    } else {
+        if (val == val.difficulty)
+        return val.difficulty + "/10";
+    }
+}
+
+//Changes:
+//Added "miles" in line 23
+//Added difficulty
+//Added the type category
+//Attemted to exclude any null values (and failed (it's commented out now))
