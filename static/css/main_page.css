@@ -1,20 +1,29 @@
-.cat-button{}
-
 #search-submit{}
 #searchResults{}
 #searchName{}
+#searchLocation{}
+#searchType{}
 
 body{
     background:#aaddaa;
     font-family:"Arial";
 }
 
-h1{
+p{
+    font-size: 18px;
+}
+
+.greenBG{
     background:#90cc90;
 }
 
 th{
     background:#ffffdd;
+}
+
+td{
+    background:#fafacc;
+    text-align:center;
 }
 
 #title{
@@ -25,6 +34,10 @@ th{
 
 .centered{
     text-align:center;
+}
+
+.righted{
+    float:right;
 }
 
 #search{
